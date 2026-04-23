@@ -27,8 +27,7 @@ pip install pynput
 3.2 Keylogger Source Code
 
 The script uses the pynput library to asynchronously monitor and capture keyboard events, distinguishing between alphanumeric and special keys.
-```
-python
+```python
 
 from pynput import keyboard
 
@@ -48,8 +47,7 @@ with keyboard.Listener(on_press=on_press) as listener:
 3.3 Testing the Keylogger
 
 The script was executed and validated by typing into a separate application. Keystrokes appeared in real-time within the terminal, confirming successful capture of both standard and special key events.
-```
-bash
+```bash
 
 python3 keylogger.py
 ```
@@ -62,9 +60,7 @@ Assuming the perspective of a security analyst investigating a suspicious endpoi
 4.1 Process Enumeration
 
 A second terminal was opened and the virtual environment activated. The ps command, filtered with grep, was used to identify the malicious Python process, revealing the script's name and its Process ID (PID).
-```
-bash
-
+```bash
 cd ~/keylogger-lab
 source keylogger-env/bin/activate
 ps aux | grep python
@@ -75,9 +71,7 @@ Analysis: The output clearly shows a Python process running keylogger.py with PI
 4.2 File Handle Inspection
 
 The lsof command was used to examine open file descriptors associated with the suspicious PID, seeking evidence of data exfiltration or log file creation.
-```
-bash
-
+```bash
 lsof -p 3851
 ```
 ![](Images/2026-04-23_14-50-1.5-lsof.png)
