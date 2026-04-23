@@ -22,7 +22,7 @@ source keylogger-env/bin/activate
 pip install pynput
 ```
 
-i[](images/2026-04-23_14-41-1.1-CreatingEnv.png)
+i[](Images/2026-04-23_14-41-1.1-CreatingEnv.png)
 3.2 Keylogger Source Code
 
 The script uses the pynput library to asynchronously monitor and capture keyboard events, distinguishing between alphanumeric and special keys.
@@ -42,7 +42,7 @@ with keyboard.Listener(on_press=on_press) as listener:
     print("Keylogger started. Monitoring keystrokes. Press Ctrl+C to stop.")
     listener.join()
 ```
-i[](images/2026-04-23_14-43-1.2-Keylogger-Script.png)
+i[](Images/2026-04-23_14-43-1.2-Keylogger-Script.png)
 
 3.3 Testing the Keylogger
 
@@ -53,7 +53,7 @@ bash
 python3 keylogger.py
 ```
 
-i[](images/2026-04-23_14-46-1.3-Keylogger-Test.png)
+i[](Images/2026-04-23_14-46-1.3-Keylogger-Test.png)
 
 4. SOC Analyst Detection Simulation
 
@@ -68,7 +68,7 @@ cd ~/keylogger-lab
 source keylogger-env/bin/activate
 ps aux | grep python
 ```
-i[](images/2026-04-23_14-49-1.4-keylogger-PID.png)
+i[](Images/2026-04-23_14-49-1.4-keylogger-PID.png)
 
 Analysis: The output clearly shows a Python process running keylogger.py with PID 3851. In a real incident, an unknown Python script executing from a user's home directory would warrant immediate investigation.
 4.2 File Handle Inspection
@@ -79,7 +79,7 @@ bash
 
 lsof -p 3851
 ```
-![](images/2026-04-23_14-50-1.5-lsof.png)
+![](Images/2026-04-23_14-50-1.5-lsof.png)
 
 Analysis: The output reveals the process has open file descriptors for standard input/output/error (0u, 1u, 2u) and memory-mapped library files (.so). No external log file was detected, confirming the keylogger currently only outputs to the console. This is a valuable observation—it indicates the tool is in a testing or non-persistent state.
 5. Key Takeaways & Skills Demonstrated
