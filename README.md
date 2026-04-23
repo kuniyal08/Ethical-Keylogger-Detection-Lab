@@ -22,7 +22,7 @@ source keylogger-env/bin/activate
 pip install pynput
 ```
 
-i[](Images/2026-04-23_14-41-1.1-CreatingEnv.png)
+![](Images/2026-04-23_14-41-1.1-CreatingEnv.png)
 
 3.2 Keylogger Source Code
 
@@ -43,7 +43,7 @@ with keyboard.Listener(on_press=on_press) as listener:
     print("Keylogger started. Monitoring keystrokes. Press Ctrl+C to stop.")
     listener.join()
 ```
-i[](Images/2026-04-23_14-46-1.3-Keylogger-Test.png)
+![](Images/2026-04-23_14-46-1.3-Keylogger-Test.png)
 
 3.3 Testing the Keylogger
 
@@ -54,7 +54,7 @@ bash
 python3 keylogger.py
 ```
 
-i[](Images/2026-04-23_14-49-1.4-keylogger-PID.png)
+![](Images/2026-04-23_14-49-1.4-keylogger-PID.png)
 
 4. SOC Analyst Detection Simulation
 
@@ -69,7 +69,7 @@ cd ~/keylogger-lab
 source keylogger-env/bin/activate
 ps aux | grep python
 ```
-i[](Images/2026-04-23_14-49-1.4-keylogger-PID.png)
+![](Images/2026-04-23_14-49-1.4-keylogger-PID.png)
 
 Analysis: The output clearly shows a Python process running keylogger.py with PID 3851. In a real incident, an unknown Python script executing from a user's home directory would warrant immediate investigation.
 4.2 File Handle Inspection
@@ -92,15 +92,3 @@ Threat Mechanics: Gained hands-on understanding of how keyloggers interface with
 Defensive Analysis: Applied real-world SOC triage techniques using native Linux commands (ps, grep, lsof) to detect and analyze a simulated threat.
 
 Articulated Documentation: Produced a comprehensive, portfolio-ready report with screenshots, code snippets, and analytical commentary.
-
-6. Resume Bullet Points
-
-Ethical Keylogger Development & Detection Lab | GitHub
-
-Engineered an educational Python keylogger in a controlled Kali Linux environment, leveraging the pynput library and a virtual environment adhering to secure development best practices.
-
-Simulated SOC analyst detection techniques by enumerating active processes (ps aux | grep python) and identifying suspicious Python execution, successfully isolating the keylogger's PID.
-
-Conducted a file handle inspection using lsof to analyze the keylogger's system interactions, documenting a complete offensive-to-defensive analysis for a cybersecurity portfolio.
-
-This project was conducted in a controlled lab environment for educational and portfolio development purposes only.
