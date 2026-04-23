@@ -20,6 +20,8 @@ cd ~/keylogger-lab
 python3 -m venv keylogger-env
 source keylogger-env/bin/activate
 pip install pynput
+```
+
 i(images/2026-04-23_14-41-1.1-CreatingEnv.png)
 3.2 Keylogger Source Code
 
