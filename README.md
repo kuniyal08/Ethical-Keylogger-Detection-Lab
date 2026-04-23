@@ -23,6 +23,7 @@ pip install pynput
 ```
 
 i[](Images/2026-04-23_14-41-1.1-CreatingEnv.png)
+
 3.2 Keylogger Source Code
 
 The script uses the pynput library to asynchronously monitor and capture keyboard events, distinguishing between alphanumeric and special keys.
