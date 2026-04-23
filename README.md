@@ -42,7 +42,7 @@ with keyboard.Listener(on_press=on_press) as listener:
     print("Keylogger started. Monitoring keystrokes. Press Ctrl+C to stop.")
     listener.join()
 ```
-i[](Images/2026-04-23_14-43-1.2-Keylogger-Script.png)
+i[](Images/2026-04-23_14-46-1.3-Keylogger-Test.png)
 
 3.3 Testing the Keylogger
 
@@ -53,7 +53,7 @@ bash
 python3 keylogger.py
 ```
 
-i[](Images/2026-04-23_14-46-1.3-Keylogger-Test.png)
+i[](Images/2026-04-23_14-49-1.4-keylogger-PID.png)
 
 4. SOC Analyst Detection Simulation
 
